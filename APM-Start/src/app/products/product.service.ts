@@ -24,7 +24,7 @@ export class ProductService {
       catchError(this.handleError)
     );
 
-  productsWithCategories$ = combineLatest([this.products$, this.categories$])
+  productsWithCategory$ = combineLatest([this.products$, this.categories$])
     .pipe(
       map(([products, categories]) =>
         products.map((product) => {

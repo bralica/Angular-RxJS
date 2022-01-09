@@ -16,7 +16,7 @@ export class ProductCategoryService {
     .pipe(
       tap(data => console.log('Product Categories: ', JSON.stringify(data))),
       catchError(this.handleError)
-      );
+    );
 
   constructor(private http: HttpClient) { }
 
